@@ -13,6 +13,7 @@ import static com.teste.massaDados.*;
 
 public class TesteAPI {
 	private String vote_id;
+	private static String chave = null;
 	private massaDados massa = new massaDados();
 	
 	@BeforeClass
@@ -45,7 +46,7 @@ public class TesteAPI {
 	private void delataVoto() {
 
 		Response response = given().contentType("application/json")
-				.header("x-api-key", "444e1b0f-9c65-4774-bd94-1293fc76f192").pathParam("vote_id", massa.vote_id).when()
+				.header("x-api-key", chave).pathParam("vote_id", massa.vote_id).when()
 				.delete("votes/{vote_id}");
 		validacao(response);
 	}
@@ -58,7 +59,7 @@ public class TesteAPI {
 
 	private void favorita() {
 		Response response = given().contentType("application/json")
-				.header("x-api-key", "444e1b0f-9c65-4774-bd94-1293fc76f192").body(massa.corpoFavorita).when()
+				.header("x-api-key", chave).body(massa.corpoFavorita).when()
 				.post("favourites");
 		String id = response.jsonPath().getString("id");
 		massa.vote_id = id;
@@ -67,7 +68,7 @@ public class TesteAPI {
 
 	private void desfavorita() {
 		Response response = given().contentType("application/json")
-				.header("x-api-key", "444e1b0f-9c65-4774-bd94-1293fc76f192").pathParam("favourite_id", vote_id).when()
+				.header("x-api-key",chave).pathParam("favourite_id", vote_id).when()
 				.delete(massa.corpoDesfavorita);
 		validacao(response);
 
