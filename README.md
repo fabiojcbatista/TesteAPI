@@ -1,4 +1,4 @@
-# Criação de testes de API 
+# Testes de API 
 
 ## Testes no padrão BDD
 - StatusCode
