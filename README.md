@@ -1,6 +1,6 @@
 # Testes de API 
 
-## Testes no padrão BDD
+## Testes no padrão BDD e TDD
 - StatusCode
 - given
 - when
