@@ -21,7 +21,7 @@
 
 ## Resultado
 
-- Criação de teste da API
+- Teste da API
 - Boas práticas de codificação
 - Boas práticas de estruturação de código
 - Princípio do *Clean Code*
