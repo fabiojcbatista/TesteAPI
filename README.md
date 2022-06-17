@@ -17,7 +17,8 @@
 - criamos projeto *maven*
 - usamos o *Junit4* 
 - usamos o *Intellij Idea* 
-- usamos o *Vs code*  
+- usamos o *Vs code* 
+- Estruturar um projeto com o .gitignore 
 
 ## Resultado
 
